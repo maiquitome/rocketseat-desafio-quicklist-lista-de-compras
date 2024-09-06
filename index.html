@@ -25,8 +25,14 @@
     <h1>Compras da semana</h1>
     <form>
       <div class="input-wrapper">
-        <input type="text" placeholder="Adicione um novo item">
-        <button type="submit">Adicionar item</button>
+        <div>
+          <input type="text" placeholder="Adicione um novo item">
+          <button type="submit">Adicionar item</button>
+        </div>
+        <span class="input-warning hidden">
+          <img src="./assets/red-warning-circle.svg" alt="ícone com exclamação">
+          <small>O campo precisa ser preenchido!</small>
+        </span>
       </div>
       <div role="list">
         <div role="listitem">

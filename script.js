@@ -37,7 +37,21 @@ const form = document.querySelector("form");
 form.onsubmit = (event) => {
   event.preventDefault();
 
-  const input = document.querySelector(".input-wrapper > input");
+  const input = document.querySelector(".input-wrapper > div > input");
+  const inputWarning = document.querySelector(
+    ".input-wrapper > span.input-warning"
+  );
+
+  if (input.value.trim() == "") {
+    input.classList.add("warning-border-color");
+    inputWarning.classList.remove("hidden");
+    input.value = "";
+    return;
+  } else {
+    input.classList.remove("warning-border-color");
+    inputWarning.classList.add("hidden");
+  }
+
   const list = document.querySelector("div[role=list]");
 
   const listitem = document.createElement("div");
